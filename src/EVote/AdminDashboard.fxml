@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EVote.AdminDashboardController">
+   <children>
+      <AnchorPane layoutX="92.0" layoutY="126.0" prefHeight="550.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="550.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="550.0" prefWidth="155.0" styleClass="logo_area" stylesheets="@Main.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="election_code" layoutX="82.0" layoutY="20.0" prefHeight="22.0" prefWidth="81.0" stylesheets="@Main.css" text="E Vote" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="65.0" layoutY="52.0" startX="-65.00001525878906" startY="-3.814697265625E-6" stroke="#ccc4c479" />
+                        <Label fx:id="org_name" alignment="CENTER" layoutX="2.0" layoutY="116.0" prefHeight="103.0" prefWidth="176.0" stylesheets="@Main.css" text="Admin" textFill="WHITE" AnchorPane.topAnchor="116.0">
+                           <font>
+                              <Font name="Times New Roman" size="16.0" />
+                           </font>
+                        </Label>
+                        <Line endX="102.79998779296875" endY="1.52587890625E-5" layoutX="66.0" layoutY="186.0" startX="-57.20001220703125" startY="1.52587890625E-5" />
+                        <Button fx:id="nav_startvoting_btn" alignment="BASELINE_LEFT" layoutX="9.0" layoutY="224.0" mnemonicParsing="false" onAction="#switchscene" prefHeight="38.0" prefWidth="150.0" styleClass="admin_strvot_btn" stylesheets="@Main.css" text="Start Voting">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="DASHBOARD" size="1.5em" />
+                           </graphic></Button>
+                        <Button fx:id="nav_verifyvoter_btn" alignment="BASELINE_LEFT" layoutX="9.0" layoutY="265.0" mnemonicParsing="false" onAction="#switchscene" prefHeight="38.0" prefWidth="151.0" styleClass="admin_verifyvoter_btn" stylesheets="@Main.css" text="Verify Voter">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="CHECK" size="1.5em" />
+                           </graphic></Button>
+                        <Button fx:id="nav_changepassword_btn" alignment="BASELINE_LEFT" layoutX="8.0" layoutY="375.0" mnemonicParsing="false" onAction="#switchscene" prefHeight="38.0" prefWidth="174.0" styleClass="admin_changepass_btn" stylesheets="@Main.css" text="Change Password">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="REFRESH" size="1.5em" />
+                           </graphic></Button>
+                        <Button fx:id="nav_logout_btn" layoutX="-12.0" layoutY="516.6" mnemonicParsing="false" onAction="#logout" prefHeight="34.0" prefWidth="115.0" styleClass="voter-nav-logout" stylesheets="@Main.css" text="Log out" AnchorPane.bottomAnchor="2.6000000000000227" AnchorPane.leftAnchor="-12.0">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="1.5em" />
+                           </graphic>
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="nav_publishresult_btn" alignment="BASELINE_LEFT" layoutX="9.0" layoutY="304.0" mnemonicParsing="false" onAction="#switchscene" prefHeight="38.0" prefWidth="150.0" styleClass="admin_publishres_btn" stylesheets="@Main.css" text="View Result">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="TROPHY" size="1.5em" />
+                           </graphic></Button>
+                        <ImageView fx:id="admin_logo" fitHeight="80.0" fitWidth="129.0" layoutX="27.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Desktop/coding.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="nav_voter_btn" alignment="BASELINE_LEFT" layoutX="9.0" layoutY="341.0" mnemonicParsing="false" onAction="#switchscene" prefHeight="38.0" prefWidth="147.0" styleClass="admin_voter_btn" stylesheets="@Main.css" text="Voters">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="USERS" size="1.5em" />
+                           </graphic></Button>
+                        <Label layoutX="13.0" layoutY="20.0" text="Org code :" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane fx:id="voter_form" prefHeight="554.0" prefWidth="833.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="1.0" prefHeight="35.0" prefWidth="918.0" styleClass="working_area" stylesheets="@Main.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button fx:id="close_btn" layoutX="601.0" layoutY="4.0" mnemonicParsing="false" onAction="#close" styleClass="close" stylesheets="@Main.css" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="CLOSE" size="1.2em" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="fullscreen_btn" layoutX="580.0" layoutY="3.0" mnemonicParsing="false" onAction="#togglefullscreen" prefHeight="26.0" prefWidth="22.0" styleClass="fullscreen" stylesheets="@Main.css" AnchorPane.rightAnchor="26.399999999999977" AnchorPane.topAnchor="4.0">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="SQUARE" size="1.1em" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="minimize_btn" layoutX="753.5999999999999" layoutY="5.8" mnemonicParsing="false" onAction="#minimize" styleClass="close" stylesheets="@Main.css" AnchorPane.rightAnchor="51.200000000000045" AnchorPane.topAnchor="5.8">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="MINUS" size="1.2em" />
+                                 </graphic>
+                              </Button>
+                           </children></AnchorPane>
+                        <Line endX="450.79998779296875" endY="-90.99999237060547" layoutX="182.0" layoutY="127.0" startX="-181.99996948242188" startY="-90.99999237060547" stroke="#e7e4e4" />
+                        <AnchorPane fx:id="admin_strtvoting_form" layoutX="-1.0" layoutY="36.0" onMouseClicked="#removeerrorwhiletyping" prefHeight="777.0" prefWidth="1170.0" styleClass="working_area" stylesheets="@Main.css" visible="false" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="36.0">
+                           <children>
+                              <Label layoutX="388.0" layoutY="7.0" text="Voting">
+                                 <font>
+                                    <Font name="Tahoma" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="35.5999755859375" endY="7.62939453125E-6" layoutX="439.0" layoutY="40.0" startX="-63.599945068359375" startY="7.62939453125E-6" />
+                              <Label layoutX="299.0" layoutY="75.0" text="Position :">
+                                 <font>
+                                    <Font name="Times New Roman" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ededed00" height="270.0" layoutX="170.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="220.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ededed00" height="272.0" layoutX="452.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="220.0" />
+                              <Label layoutX="227.0" layoutY="146.0" text="Candidate 1">
+                                 <font>
+                                    <Font name="Times New Roman" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="506.0" layoutY="146.0" text="Candidate 2">
+                                 <font>
+                                    <Font name="Times New Roman" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="182.0" layoutY="198.0" text="Name :">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="admin_candidate_one_name" layoutX="233.0" layoutY="199.0" onMouseClicked="#removeerrorwhiletyping" prefHeight="26.0" prefWidth="150.0" />
+                              <Label layoutX="461.0" layoutY="197.0" text="Name :">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="position_name" layoutX="377.0" layoutY="73.0" onAction="#removeerrorwhiletyping" onMouseClicked="#removeerrorwhiletyping" prefHeight="26.0" prefWidth="174.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <TextField fx:id="admin_candidate_two_name" layoutX="512.0" layoutY="198.0" onMouseClicked="#removeerrorwhiletyping" prefHeight="26.0" prefWidth="150.0" />
+                              <Label layoutX="182.0" layoutY="316.0" text="Image  :">
+                                 <font>
+                                    <Font name="Times New Roman" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="142.0" layoutX="235.0" layoutY="248.0" stroke="BLACK" strokeType="INSIDE" width="140.0" />
+                              <ImageView fx:id="candidate_one_image" fitHeight="142.0" fitWidth="140.0" layoutX="235.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="candidateone_imgbtn" layoutX="236.0" layoutY="249.0" mnemonicParsing="false" onAction="#insertImageone" onMouseClicked="#removeerrorwhiletyping" prefHeight="139.0" prefWidth="138.0" styleClass="insert-image" stylesheets="@Main.css" text="Insert Image" />
+                              <Label layoutX="459.0" layoutY="306.0" text="Image  :">
+                                 <font>
+                                    <Font name="Times New Roman" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="start_election_btn" layoutX="529.0" layoutY="457.0" mnemonicParsing="false" onAction="#startElection" prefHeight="40.0" prefWidth="146.0" styleClass="start" stylesheets="@Main.css" text="Start Election" />
+                              <Label fx:id="position_error" layoutX="376.0" layoutY="107.0" prefHeight="18.0" prefWidth="177.0" textFill="RED" />
+                              <Label fx:id="candidateone_error" layoutX="214.0" layoutY="228.0" prefHeight="18.0" prefWidth="170.0" textFill="RED" />
+                              <Label fx:id="candidatetwo_error" layoutX="497.0" layoutY="227.0" prefHeight="18.0" prefWidth="170.0" textFill="RED" />
+                              <Label fx:id="candidateone_img_error" layoutX="214.0" layoutY="418.0" prefHeight="18.0" prefWidth="170.0" textFill="RED" />
+                              <Label fx:id="candidatetwo_img_error" layoutX="487.0" layoutY="419.0" prefHeight="18.0" prefWidth="170.0" textFill="RED" />
+                              <Label layoutX="185.0" layoutY="401.0" text="img :" />
+                              <Label fx:id="imageone_name" layoutX="215.0" layoutY="402.0" prefHeight="18.0" prefWidth="179.0" text="No image Selected" />
+                              <Label layoutX="471.0" layoutY="401.0" text="img :" />
+                              <Label fx:id="imagetwo_name" layoutX="498.0" layoutY="402.0" prefHeight="18.0" prefWidth="184.0" text="No image Selected" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="142.0" layoutX="512.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="140.0" />
+                              <ImageView fx:id="candidate_two_image" fitHeight="141.0" fitWidth="140.0" layoutX="512.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="candidatetwo_imgbtn" layoutX="513.0" layoutY="250.0" mnemonicParsing="false" onAction="#insertImagetwo" onMouseClicked="#removeerrorwhiletyping" prefHeight="139.0" prefWidth="138.0" styleClass="insert-image" stylesheets="@Main.css" text="Insert Image" />
+                         
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="verifyvoter_form" layoutX="-1.0" layoutY="36.0" onMouseClicked="#selectUnverified" prefHeight="764.0" prefWidth="919.0" styleClass="working_area" stylesheets="@Main.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="36.0">
+                           <children>
+                              <Label layoutX="25.0" layoutY="453.0" prefHeight="22.0" prefWidth="62.0" text="Phone :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="verification_phone_txt" editable="false" layoutX="78.0" layoutY="438.0" prefHeight="26.0" prefWidth="171.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <Label layoutX="25.0" layoutY="525.0" prefHeight="22.0" prefWidth="46.0" text="DOB :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="487.0" prefHeight="22.0" prefWidth="56.0" text="Name :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="verification_name_txt" editable="false" layoutX="78.0" layoutY="475.0" prefHeight="26.0" prefWidth="171.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <Label layoutX="23.0" layoutY="563.0" prefHeight="22.0" prefWidth="70.0" text="Address :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="verification_address_txt" editable="false" layoutX="92.0" layoutY="546.0" prefHeight="26.0" prefWidth="162.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <Label layoutX="21.0" layoutY="602.0" prefHeight="22.0" prefWidth="106.0" text="Citizenship no :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="verification_citizenshpno_txt" editable="false" layoutX="128.0" layoutY="585.0" prefHeight="26.0" prefWidth="120.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <Label layoutX="28.0" layoutY="695.0" text="Photo :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="291.0" layoutY="485.0" text="Citizenship front :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <ImageView fx:id="review_photo" fitHeight="74.0" fitWidth="79.0" layoutX="114.0" layoutY="651.0" onMouseClicked="#Zoomphoto" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Desktop/Evote-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="review_citizenfront" fitHeight="59.0" fitWidth="71.0" layoutX="410.0" layoutY="458.0" onMouseClicked="#Zoomcitizenfront" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Desktop/Evote-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="291.0" layoutY="593.0" text="Employee id :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="289.0" layoutY="687.0" text="Citizenship back :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <ImageView fx:id="review_employeeid" fitHeight="59.0" fitWidth="71.0" layoutX="391.0" layoutY="561.0" onMouseClicked="#ZoomEmployeeid" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Desktop/Evote-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="review_citizenback" fitHeight="61.0" fitWidth="71.0" layoutX="403.0" layoutY="650.0" onMouseClicked="#Zoomcitizenback" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Desktop/Evote-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="626.0" layoutY="662.0" text="Reason :" />
+                              <TextArea fx:id="verification_reason_txt" layoutX="681.0" layoutY="640.0" prefHeight="63.0" prefWidth="456.0" promptText="No Reason Required for Approval" />
+                              <Button fx:id="verification_reject_btn" layoutX="956.0" layoutY="726.0" mnemonicParsing="false" onAction="#reject" prefHeight="26.0" prefWidth="94.0" text="Reject" />
+                              <Button fx:id="verification_verify_btn" layoutX="1053.0" layoutY="726.0" mnemonicParsing="false" onAction="#approve" prefHeight="26.0" prefWidth="89.0" text="Approve" />
+                              <Label layoutX="430.0" layoutY="3.0" text="Unverified Voter">
+                                 <font>
+                                    <Font name="Times New Roman" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="zoomedimage" fitHeight="278.0" fitWidth="524.0" layoutX="585.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true" />
+                              <TextField fx:id="verification_dob_txt" editable="false" layoutX="78.0" layoutY="513.0" prefHeight="26.0" prefWidth="171.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <Label layoutX="27.0" layoutY="728.0" text="Image :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="photo_name" layoutX="103.0" layoutY="727.0" prefHeight="18.0" prefWidth="137.0" text="Image Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="293.0" layoutY="619.0" text="Image :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="employeeid_name" layoutX="338.0" layoutY="620.0" prefHeight="18.0" prefWidth="134.0" text="Image Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="290.0" layoutY="527.0" text="Image :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="citizenshipfront_name" layoutX="335.0" layoutY="528.0" prefHeight="18.0" prefWidth="137.0" text="Image Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="291.0" layoutY="727.0" text="Image :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="citizenshipback_name" layoutX="336.0" layoutY="728.0" prefHeight="18.0" prefWidth="134.0" text="Image Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="26.0" layoutY="423.0" prefHeight="22.0" prefWidth="62.0" text="ID :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                      
+                              <Line endX="25.466644287109375" endY="220.6666259765625" layoutX="482.0" layoutY="534.0" startX="25.466644287109375" startY="-198.5333251953125" />
+                              <Label layoutX="801.0" layoutY="269.0" text="Image preview" />
+                              <Label fx:id="remarks_txt" layoutX="681.0" layoutY="704.0" textFill="#f20000" />
+                              <Label fx:id="unverified_error" layoutX="26.0" layoutY="315.0" prefHeight="30.0" prefWidth="459.0" textFill="#fa0000">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                          
+                              <Label layoutX="194.0" layoutY="427.0" prefHeight="22.0" prefWidth="56.0" text="Email :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="unverified_id" editable="false" layoutX="52.0" layoutY="408.0" prefHeight="33.0" prefWidth="129.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <TextField fx:id="unverified_email" editable="false" layoutX="247.0" layoutY="412.0" prefHeight="34.0" prefWidth="247.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <TableView fx:id="verification_tableview" layoutX="11.0" layoutY="23.0" onMouseClicked="#selectUnverified" prefHeight="242.0" prefWidth="1146.0">
+                                <columns>
+                                  <TableColumn fx:id="verificationtable_col_id" prefWidth="75.0" text="id" />
+                                  <TableColumn fx:id="verificationtable_col_phone" prefWidth="75.0" text="phone" />
+                                    <TableColumn fx:id="verificationtable_col_name" prefWidth="75.0" text="name" />
+                                    <TableColumn fx:id="verificationtable_col_email" prefWidth="89.06663513183594" text="email" />
+                                    <TableColumn fx:id="verificationtable_col_dob" prefWidth="73.5999755859375" text="dob" />
+                                    <TableColumn fx:id="verificationtable_col_citizenshipno" prefWidth="96.26666259765625" text="citizenshipno" />
+                                    <TableColumn fx:id="verificationtable_col_address" prefWidth="103.19992065429688" text="address" />
+                                    <TableColumn fx:id="verificationtable_col_photo" prefWidth="73.60015869140625" text="photo" />
+                                    <TableColumn fx:id="verificationtable_col_employeeidimage" prefWidth="87.73321533203125" text="employeeid" />
+                                    <TableColumn fx:id="verificationtable_col_citizenfrontimg" prefWidth="71.20001220703125" text="citizenshipfront" />
+                                    <TableColumn fx:id="verificationtable_col_citizenbackimg" prefWidth="71.20000000000005" text="citizenshipfront" />
+                                </columns>
+                              </TableView>
+                              <Label fx:id="unverified_citizenship_err" layoutX="30.0" layoutY="367.0" prefHeight="30.0" prefWidth="459.0" textFill="#fa0000">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="voter_form" layoutY="36.0" prefHeight="766.0" prefWidth="1169.0" styleClass="working_area" stylesheets="@Main.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
+                           <children>
+                              <Button fx:id="voter_delete_btn" layoutX="986.0" layoutY="699.0" mnemonicParsing="false" onAction="#deletevoter" prefHeight="43.0" prefWidth="122.0" styleClass="delete" stylesheets="@Main.css" text="Delete Voter" />
+                              <Label layoutX="13.0" layoutY="13.0" text="Total Voter :">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="voter_total_txt" layoutX="103.0" layoutY="15.0" text="7" />
+                              <Label layoutX="14.0" layoutY="461.0" prefHeight="22.0" prefWidth="62.0" text="Phone :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="voter_phone" editable="false" layoutX="85.0" layoutY="447.0" prefHeight="26.0" prefWidth="171.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <Label layoutX="17.0" layoutY="536.0" prefHeight="22.0" prefWidth="46.0" text="DOB :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="13.0" layoutY="493.0" prefHeight="22.0" prefWidth="56.0" text="Name :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="voter_name_txt" editable="false" layoutX="76.0" layoutY="483.0" prefHeight="33.0" prefWidth="205.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <Label layoutX="18.0" layoutY="614.0" prefHeight="22.0" prefWidth="70.0" text="Address :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="voter_address_txt" editable="false" layoutX="91.0" layoutY="601.0" prefHeight="26.0" prefWidth="162.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <Label layoutX="9.0" layoutY="574.0" prefHeight="22.0" prefWidth="106.0" text="Citizenship no :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="voter_citizenshipno_txt" editable="false" layoutX="125.0" layoutY="564.0" prefHeight="26.0" prefWidth="120.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <Label layoutX="32.0" layoutY="691.0" text="Photo :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="303.0" layoutY="592.0" text="Citizenship front :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="voter_photo_img" fitHeight="74.0" fitWidth="79.0" layoutX="88.0" layoutY="657.0" onMouseClicked="#Zoomvoterphoto" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Desktop/Evote-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="voter_citizenshipback_img" fitHeight="59.0" fitWidth="71.0" layoutX="422.0" layoutY="669.0" onMouseClicked="#Zoomvotercitizenback" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Desktop/Evote-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="317.0" layoutY="495.0" text="Employee id :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="304.0" layoutY="698.0" text="Citizenship back :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="voter_citizenshipfront_img" fitHeight="59.0" fitWidth="71.0" layoutX="415.0" layoutY="562.0" onMouseClicked="#Zoomvotercitizenfront" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Desktop/Evote-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="voter_employeeid_img" fitHeight="61.0" fitWidth="71.0" layoutX="421.0" layoutY="464.0" onMouseClicked="#ZoomvoterEmployeeid" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Desktop/Evote-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="voter_zoomedimage" fitHeight="249.0" fitWidth="488.0" layoutX="675.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label layoutX="337.0" layoutY="525.0" text="Image :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="voter_employeeid_name" layoutX="395.0" layoutY="525.0" prefHeight="18.0" prefWidth="137.0" text="Image Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="29.0" layoutY="726.0" text="Image :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="voter_citizenshipfront_name" layoutX="396.0" layoutY="620.0" prefHeight="18.0" prefWidth="134.0" text="Image Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="346.0" layoutY="730.0" text="Image :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="voter_citizenshipback_name" layoutX="396.0" layoutY="731.0" prefHeight="18.0" prefWidth="137.0" text="Image Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="347.0" layoutY="620.0" text="Image :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="voter_photo_name" layoutX="83.0" layoutY="727.0" prefHeight="18.0" prefWidth="134.0" text="Image Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="15.0" layoutY="421.0" prefHeight="22.0" prefWidth="30.0" text="ID :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="25.466644287109375" endY="220.6666259765625" layoutX="514.0" layoutY="535.0" startX="25.46661376953125" startY="-95.00003051757812" />
+                              <Label layoutX="873.0" layoutY="380.0" text="Image preview" />
+                              <Label fx:id="remarks_txt1" textFill="#f20000" />
+                              <Label layoutX="211.0" layoutY="421.0" prefHeight="22.0" prefWidth="56.0" text="Email :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="voter_id_txt" editable="false" layoutX="53.0" layoutY="410.0" prefHeight="34.0" prefWidth="118.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <TextField fx:id="voter_email" editable="false" layoutX="265.0" layoutY="410.0" prefHeight="34.0" prefWidth="254.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <TableView fx:id="voter_tableview" layoutX="7.0" layoutY="36.0" onMouseClicked="#selectVoters" prefHeight="336.0" prefWidth="1149.0">
+                                 <columns>
+                                    <TableColumn fx:id="voter_tablecol_id" prefWidth="75.0" text="id" />
+                                    <TableColumn fx:id="voter_tablecol_phone" prefWidth="75.0" text="phone" />
+                                    <TableColumn fx:id="voter_tablecol_name" prefWidth="75.0" text="name" />
+                                    <TableColumn fx:id="voter_tablecol_email" prefWidth="107.73342895507812" text="email" />
+                                    <TableColumn fx:id="voter_tablecol_dob" prefWidth="95.46664428710938" text="dob" />
+                                    <TableColumn fx:id="voter_tablecol_citizenno" prefWidth="100.53335571289062" text="citizenshipno" />
+                                    <TableColumn fx:id="voter_tablecol_address" prefWidth="100.53338623046875" text="address" />
+                                    <TableColumn fx:id="voter_tablecol_photo" prefWidth="102.13323974609375" text="photo" />
+                                    <TableColumn fx:id="voter_tablecol_employeeidimg" prefWidth="123.20001220703125" text="employeeid" />
+                                    <TableColumn fx:id="voter_tablecol_citizenshipfront" minWidth="0.0" prefWidth="134.40008544921875" text="citizenshipfront" />
+                                    <TableColumn fx:id="voter_tablecol_citizenshipback" prefWidth="161.066650390625" text="citizenshipfront" />
+                                 </columns>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TableView>
+                              <Label layoutX="445.0" layoutY="3.0" text="Voters">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="voter_dob_txt" editable="false" layoutX="76.0" layoutY="522.0" prefHeight="34.0" prefWidth="181.0" styleClass="textfields" stylesheets="@Main.css" />
+                              <TextField fx:id="search_txtfield" layoutX="1004.0" layoutY="4.0" onAction="#VoterSearch" promptText="Search">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextField>
+                              <FontAwesomeIcon glyphName="SEARCH" layoutX="989.0" layoutY="19.0" />
+                              <Label fx:id="votererror_txt" layoutX="303.0" layoutY="383.0" text=" " textFill="#d71414" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="admin_election_details_form" layoutY="36.0" prefHeight="764.0" prefWidth="1168.0" styleClass="working_area" stylesheets="@Main.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
+                           <children>
+                              <Label fx:id="publishres_totalvoter" layoutX="612.0" layoutY="162.0" text="52" />
+                              <Label layoutX="81.0" layoutY="163.0" text="No of people voted :">
+                                 <font>
+                                    <Font name="Times New Roman" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="publishres_numbervoted" layoutX="204.0" layoutY="162.0" text="5" />
+                              <Label layoutX="533.0" layoutY="162.0" text="Total Voter :" />
+                              <Button fx:id="publishres_refresh_btn" layoutX="224.0" layoutY="158.0" mnemonicParsing="false" onAction="#showNoOfVotes" text="Refresh">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="REFRESH" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="publishres_endvoting_btn" layoutX="248.0" layoutY="280.0" mnemonicParsing="false" onAction="#endElection" prefHeight="42.0" prefWidth="324.0" styleClass="end" stylesheets="@Main.css" text="End Voting and Publish Result" />
+                              <Label layoutX="232.0" layoutY="61.0" text="There's a live election in progress">
+                                 <font>
+                                    <Font name="Times New Roman" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="admin_changepassword_form" layoutY="36.0" prefHeight="514.0" prefWidth="634.0" styleClass="working_area" stylesheets="@Main.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.7999999999999545" AnchorPane.topAnchor="36.0">
+                           <children>
+                              <GridPane layoutX="119.0" layoutY="107.0" prefHeight="158.0" prefWidth="312.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.20001220703125" minWidth="10.0" prefWidth="108.7999755859375" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.7999725341797" minWidth="10.0" prefWidth="202.4000244140625" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="152.59998168945313" minHeight="4.599981689453131" prefHeight="32.59998779296875" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="152.59998168945313" minHeight="4.599981689453131" prefHeight="16.6" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="190.20001831054688" minHeight="10.0" prefHeight="36.6" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="190.20001831054688" minHeight="10.0" prefHeight="10.200000000000003" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="236.39999999999998" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="236.39999999999998" minHeight="10.0" prefHeight="16.40001831054687" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="236.39999999999998" minHeight="1.9999938964843693" prefHeight="6.799981689453119" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="105.0" text="Current Password :" />
+                                    <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="102.0" text="New Password :" GridPane.rowIndex="2" />
+                                    <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="107.0" text="Confirm Password :" GridPane.rowIndex="4" />
+                                    <TextField fx:id="admin_cp_current" onAction="#passworderrorset" onMouseClicked="#passworderrorset" prefHeight="26.0" prefWidth="180.0" GridPane.columnIndex="1" />
+                                    <PasswordField fx:id="admin_cp_new" onAction="#passworderrorset" onMouseClicked="#passworderrorset" styleClass="checkbox-prompttext" stylesheets="@Main.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <PasswordField fx:id="admin_cp_confirm" onAction="#passworderrorset" onMouseClicked="#passworderrorset" prefHeight="29.0" prefWidth="198.0" styleClass="checkbox-prompttext" stylesheets="@Main.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label fx:id="current_pass_error" prefHeight="29.0" prefWidth="202.0" text="cp error" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="new_pass_error" text="np error" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label fx:id="confirm_pass_error" text="confirm error" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                 </children>
+                              </GridPane>
+                              <Label layoutX="243.0" layoutY="13.0" text="Change  Password">
+                                 <font>
+                                    <Font name="Times New Roman" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="74.0" endY="0.20000457763671875" layoutX="317.0" layoutY="36.0" startX="-73.99998474121094" startY="0.20000457763671875" />
+                              <Button fx:id="admin_changepass_btn" layoutX="221.0" layoutY="291.0" mnemonicParsing="false" onAction="#changepassword" prefHeight="32.0" prefWidth="191.0" styleClass="changepasswordbtn" stylesheets="@Main.css" text="Change Password" />
+                              <FontAwesomeIcon fx:id="shownew_icon" fill="#253436" glyphName="EYE" layoutX="434.0" layoutY="178.0" onMousePressed="#shownewpass" onMouseReleased="#hideNewPass" size="1.5em" />
+                              <FontAwesomeIcon fx:id="showconfirm_icon" fill="#253436" glyphName="EYE" layoutX="435.0" layoutY="229.0" onMousePressed="#showconfirmpass" onMouseReleased="#hideconfirmpass" size="1.5em" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="admin_result_form" layoutY="36.0" prefHeight="766.0" prefWidth="1165.0" styleClass="working_area" stylesheets="@Main.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0f0f000" height="303.0" layoutX="326.0" layoutY="183.0" stroke="BLACK" strokeType="INSIDE" width="243.0" />
+                              <Label layoutX="338.0" layoutY="196.0" text="Position :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="published_result_post" alignment="TOP_LEFT" layoutX="402.0" layoutY="195.0" prefHeight="23.0" prefWidth="156.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="published_result_img" fitHeight="130.0" fitWidth="192.0" layoutX="350.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label layoutX="329.0" layoutY="406.0" prefHeight="22.0" prefWidth="141.0" text="Total Vote received :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="published_result_vote" layoutX="465.0" layoutY="405.0" prefHeight="23.0" prefWidth="97.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="379.0" layoutY="374.0" text="Name :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="published_result_name" layoutX="438.0" layoutY="373.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="402.0" layoutY="434.0" prefHeight="22.0" prefWidth="82.0" text="Won by :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="published_result_wonby" layoutX="464.0" layoutY="434.0" prefHeight="23.0" prefWidth="99.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="wish" alignment="CENTER" layoutX="328.0" layoutY="502.0" prefHeight="24.0" prefWidth="236.0" text="Congratulations !!!">
+                                 <font>
+                                    <Font name="Times New Roman" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="319.0" layoutY="140.0" text="Election Date :">
+                                 <font>
+                                    <Font name="Times New Roman" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="election_date" layoutX="452.0" layoutY="141.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="21.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

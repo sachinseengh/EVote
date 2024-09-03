@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EVote.RegistrationController">
+   <children>
+      <AnchorPane layoutX="-4.0" layoutY="-3.0" prefHeight="700.0" prefWidth="1062.0" />
+      <BorderPane layoutX="200.0" layoutY="103.0" prefHeight="550.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane fx:id="center_form" prefHeight="700.0" prefWidth="780.0" styleClass="working_area" stylesheets="@Main.css" BorderPane.alignment="TOP_RIGHT">
+               <children>
+                  <AnchorPane layoutX="-41.0" layoutY="26.0" prefHeight="34.0" prefWidth="796.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="360.0" layoutY="7.0" text="Voter Registration Form">
+                           <font>
+                              <Font name="Times New Roman Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="449.0" layoutY="29.0" startX="-100.0" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="57.0" layoutY="187.0" prefHeight="31.0" prefWidth="96.0" text="Full Name :">
+                     <font>
+                        <Font name="Times New Roman" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fullname_txtfield" layoutX="160.0" layoutY="178.0" onMouseClicked="#seterrornull" prefHeight="33.0" prefWidth="226.0" styleClass="textfields" stylesheets="@Main.css" />
+                  <Label layoutX="56.0" layoutY="290.0" text="Phone :">
+                     <font>
+                        <Font name="Times New Roman" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="phone_txtfield" layoutX="121.0" layoutY="282.0" onMouseClicked="#seterrornull" prefHeight="33.0" prefWidth="272.0" styleClass="textfields" stylesheets="@Main.css" />
+                  <Label layoutX="57.0" layoutY="241.0" text="Email :">
+                     <font>
+                        <Font name="Times New Roman" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="email_txt" layoutX="127.0" layoutY="232.0" onMouseClicked="#seterrornull" prefHeight="34.0" prefWidth="262.0" styleClass="textfields" stylesheets="@Main.css" />
+                  <Label layoutX="54.0" layoutY="339.0" prefHeight="19.0" prefWidth="112.0" text="Date of Birth :">
+                     <font>
+                        <Font name="Times New Roman" size="19.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="datepicker_txtfield" editable="false" layoutX="168.0" layoutY="336.0" onMouseClicked="#seterrornull" prefHeight="26.0" prefWidth="226.0" promptText="Select Date" stylesheets="@Main.css">
+                     <styleClass>
+                        <String fx:value="spinner" />
+                        <String fx:value="date-picker-popup" />
+                     </styleClass></DatePicker>
+                  <Label layoutX="53.0" layoutY="386.0" text="Address :">
+                     <font>
+                        <Font name="Times New Roman" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="address_txtfield" layoutX="138.0" layoutY="377.0" onMouseClicked="#seterrornull" prefHeight="33.0" prefWidth="255.0" styleClass="textfields" stylesheets="@Main.css" />
+                  <Label layoutX="54.0" layoutY="434.0" text="Password :">
+                     <font>
+                        <Font name="Times New Roman" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="password_textfield" layoutX="149.0" layoutY="423.0" onMouseClicked="#seterrornull" prefHeight="33.0" prefWidth="245.0" styleClass="textfields" stylesheets="@Main.css" />
+                  <Label layoutX="50.0" layoutY="477.0" text="Citizenship no :">
+                     <font>
+                        <Font name="Times New Roman" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="citizenshipno_txtfield" layoutX="186.0" layoutY="468.0" onMouseClicked="#seterrornull" prefHeight="33.0" prefWidth="211.0" styleClass="textfields" stylesheets="@Main.css" />
+                  <Label layoutX="50.0" layoutY="590.0" text="Passport Size photo :">
+                     <font>
+                        <Font name="Times New Roman" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="471.0" layoutY="135.0" prefHeight="20.0" prefWidth="117.0" text="Organization id :">
+                     <font>
+                        <Font name="Times New Roman" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="457.0" layoutY="265.0" text="Citizenship Front :">
+                     <font>
+                        <Font name="Times New Roman" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="452.0" layoutY="432.0" text="Citizenship Back :">
+                     <font>
+                        <Font name="Times New Roman" size="17.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff96" height="85.0" layoutX="591.0" layoutY="391.0" stroke="BLACK" strokeType="INSIDE" width="161.0" />
+                  <ImageView fx:id="citizenback_imageview" fitHeight="85.0" fitWidth="161.0" layoutX="591.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="citizenshipback_addbtn" layoutX="591.0" layoutY="392.0" mnemonicParsing="false" onAction="#insertcitizenback" onMouseClicked="#seterrornull" prefHeight="85.0" prefWidth="162.0" styleClass="insert-image" stylesheets="@Main.css" text="Add image" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff93" height="85.0" layoutX="595.0" layoutY="110.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
+                  <ImageView fx:id="employeeid_imageview" fitHeight="85.0" fitWidth="160.0" layoutX="595.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="employeeid_addbtn" layoutX="595.0" layoutY="111.0" mnemonicParsing="false" onAction="#insertemployeeid" onMouseClicked="#seterrornull" prefHeight="85.0" prefWidth="159.0" styleClass="insert-image" stylesheets="@Main.css" text="Add image" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff99" height="85.0" layoutX="219.0" layoutY="547.0" stroke="BLACK" strokeType="INSIDE" width="161.0" />
+                  <ImageView fx:id="photo_imageview" fitHeight="85.0" fitWidth="161.0" layoutX="220.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="passportsizephoto_btn" layoutX="219.0" layoutY="547.0" mnemonicParsing="false" onAction="#insertpassportsizeimage" onMouseClicked="#seterrornull" prefHeight="85.0" prefWidth="161.0" styleClass="insert-image" stylesheets="@Main.css" text="Add image" />
+                  <Button fx:id="submit_btn" layoutX="637.0" layoutY="609.0" mnemonicParsing="false" onAction="#register" prefHeight="44.0" prefWidth="140.0" text="Submit" />
+                  <Button fx:id="reset_btn" layoutX="499.0" layoutY="611.0" mnemonicParsing="false" onAction="#clearallfield" prefHeight="39.0" prefWidth="121.0" text="Reset" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffa3" height="85.0" layoutX="595.0" layoutY="233.0" stroke="BLACK" strokeType="INSIDE" width="161.0" />
+                  <ImageView fx:id="citizenfront_imageview" fitHeight="85.0" fitWidth="161.0" layoutX="595.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="citizenshipfront_addbtn" layoutX="595.0" layoutY="234.0" mnemonicParsing="false" onAction="#insertcitizenfront" onMouseClicked="#seterrornull" prefHeight="85.0" prefWidth="162.0" styleClass="insert-image" stylesheets="@Main.css" text="Add image" />
+                  <Line endX="711.5999755859375" endY="11.400003433227539" layoutX="89.0" layoutY="16.0" startX="-95.40000915527344" startY="11.400003433227539" stroke="#eaeaea" />
+                  <AnchorPane layoutX="138.5999999999999" layoutY="-12.0" prefHeight="54.0" prefWidth="676.0" AnchorPane.rightAnchor="6.2000000000000455" AnchorPane.topAnchor="-12.0">
+                     <children>
+                        <Button fx:id="register_fullscreenbtn" layoutX="622.0" layoutY="14.0" mnemonicParsing="false" onAction="#togglefullscreen" styleClass="minimize" stylesheets="@Main.css" AnchorPane.rightAnchor="24.400000000000045" AnchorPane.topAnchor="14.0">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="SQUARE" size="1.2em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="register_minimize_btn" layoutX="600.0" layoutY="15.0" mnemonicParsing="false" onAction="#minimize" styleClass="fullscreen" stylesheets="@Main.css" AnchorPane.topAnchor="14.4">
+                           <graphic>
+                              <FontAwesomeIcon fx:id="register_minimizebtn" glyphName="MINUS" size="1.2em" />
+                           </graphic>
+                        </Button>
+                        <Button layoutX="644.0" layoutY="12.0" mnemonicParsing="false" onAction="#close" styleClass="close" stylesheets="@Main.css">
+                           <graphic>
+                              <FontAwesomeIcon fx:id="register_closebtn" glyphName="CLOSE" size="1.6em" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="fullname_error" alignment="CENTER" layoutX="158.0" layoutY="212.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label fx:id="address_error" alignment="CENTER" layoutX="148.0" layoutY="414.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label fx:id="password_error" alignment="CENTER" layoutX="158.0" layoutY="458.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label fx:id="citizenshipno_error" alignment="CENTER" layoutX="174.0" layoutY="510.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label fx:id="dateofbirth_error" alignment="CENTER" layoutX="172.0" layoutY="368.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label fx:id="phone_error" alignment="CENTER" layoutX="121.0" layoutY="316.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label fx:id="email_error" alignment="CENTER" layoutX="127.0" layoutY="263.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label fx:id="citizenshipfront_error" alignment="CENTER" layoutX="530.0" layoutY="343.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label fx:id="employee_id_error" alignment="CENTER" layoutX="534.0" layoutY="211.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label fx:id="passpost_error" alignment="CENTER" layoutX="165.0" layoutY="662.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label layoutX="521.0" layoutY="323.0" text="img Name :" />
+                  <Label fx:id="citizenshipfront_img" layoutX="589.0" layoutY="323.0" maxHeight="18.0" maxWidth="222.0" text="No file selected" />
+                  <Label fx:id="citizenshipback_error" alignment="CENTER" layoutX="529.0" layoutY="498.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label layoutX="517.0" layoutY="482.0" text="img Name :" />
+                  <Label fx:id="citizenshipback_name" layoutX="585.0" layoutY="481.0" maxHeight="18.0" maxWidth="222.0" text="No file selected" />
+                  <Label layoutX="523.0" layoutY="196.0" text="img Name :" />
+                  <Label fx:id="employee_id_img" layoutX="591.0" layoutY="196.0" maxHeight="18.0" maxWidth="221.0" prefHeight="18.0" prefWidth="221.0" text="No file selected" />
+                  <Label layoutX="139.0" layoutY="648.0" text="img Name :" />
+                  <Label fx:id="passportphoto_img" layoutX="207.0" layoutY="648.0" maxHeight="18.0" maxWidth="222.0" text="No file selected" />
+                  <Label layoutX="56.0" layoutY="114.0" prefHeight="31.0" prefWidth="96.0" text="Org.Code:">
+                     <font>
+                        <Font name="Times New Roman" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="org_code" layoutX="159.0" layoutY="105.0" onKeyTyped="#setOrganization" onMouseClicked="#seterrornull" prefHeight="33.0" prefWidth="226.0" styleClass="textfields" stylesheets="@Main.css" />
+                  <Label fx:id="orgcode_error" alignment="CENTER" layoutX="157.0" layoutY="139.0" prefHeight="18.0" prefWidth="234.0" text="Name is required" textFill="#ff0707" />
+                  <Label fx:id="organization_name" alignment="CENTER" layoutX="82.0" layoutY="87.0" prefHeight="18.0" prefWidth="299.0">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </center>
+         <left>
+            <AnchorPane fx:id="left_form" prefHeight="591.0" prefWidth="148.0" styleClass="logo_area" stylesheets="@Main.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="94.0" layoutX="34.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Desktop/Evote-logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="58.0" layoutY="103.0" prefHeight="42.0" prefWidth="66.0" styleClass="evote" stylesheets="@Main.css" text="Vote" textFill="#f7f7f7">
+                     <font>
+                        <Font name="Times New Roman Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="16.0" layoutY="104.0" prefHeight="40.0" prefWidth="61.0" styleClass="evote" stylesheets="@Main.css" text="E " textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="TOP_LEFT" layoutX="3.0" layoutY="228.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="150.0" styleClass="register-registerbtn" stylesheets="@Main.css" text="Register" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="register_voter_login" alignment="TOP_LEFT" layoutX="5.0" layoutY="278.0" mnemonicParsing="false" onAction="#switchUser" prefHeight="38.0" prefWidth="147.0" styleClass="register-voter-login" stylesheets="@Main.css" text="Voter Login">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USER" />
+                     </graphic>
+                  </Button>
+                  <Line endX="100.0" layoutX="57.0" layoutY="148.0" startX="-61.0000114440918" startY="1.52587890625E-5" stroke="#968888" />
+               </children>
+               <BorderPane.margin>
+                  <Insets top="-1.0" />
+               </BorderPane.margin>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

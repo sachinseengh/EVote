@@ -1,0 +1,18 @@
+--module-path "C:\Program Files\Java\ecli\javafx-sdk-21.0.1\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics
+
+
+https://download.eclipse.org/efxclips... 
+
+
+
+--module-path "C:\Program Files\Java\ecli\javafx-sdk-21.0.1\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics
+
+
+https://download.eclipse.org/efxclipse/updates-released/3.8.0/site
+
+
+
+--module-path "C:\Users\Amit\Desktop\JavaFX setup with JDK 21.0\javafx-sdk-21.0.1\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics
+
+
+java --module-path "C:\Program Files\Java\ecli\javafx-sdk-21.0.1\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics -jar hotel.jar
